@@ -8,6 +8,9 @@
 
 <body class="container-fluid" style="font-size: large; background-color: #cfdae7;">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div>
+            <h3>Your number 1 spa services spot </h3>
+        </div>
 
         <!-- Indicators -->
         <ol class="carousel-indicators">
@@ -58,6 +61,32 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+
+    <table class="table table-hoover table-success">
+        <thread>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thread>
+        <tbody>
+            {% for item in items %}
+            <tr>
+                <td>{{ item.ID }}</td>
+                <td>{{ item.image }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.price }}</td>
+                
+                <td>
+                    <button class="btn btn-outline btn-info">Order</button>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
 </body>
